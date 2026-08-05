@@ -16,13 +16,15 @@ This does that mechanical part for you.
 ## Install
 
 ```
-pipx install slither-analyzer
-python3 foundry_invariant_init.py src/Vault.sol
+pipx install git+https://github.com/hunterinvariants/foundry-invariant-init
 ```
 
-(Slither needs a solc that can compile your contract. `solc-select` handles that.)
+This pulls Slither in automatically, so there is nothing else to set up. Slither still needs a `solc`
+that can compile your contract; `solc-select` handles that.
 
 ## Usage
+
+From inside your Foundry project:
 
 ```
 foundry-invariant-init src/Vault.sol

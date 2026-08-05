@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "foundry-invariant-init"
+version = "0.1.0"
+description = "Scaffold a Foundry invariant test suite for any Solidity contract, in one command."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "hunterinvariants" }]
+keywords = ["foundry", "invariant-testing", "solidity", "fuzzing", "slither", "testing"]
+dependencies = ["slither-analyzer>=0.10"]
+
+[project.urls]
+Homepage = "https://github.com/hunterinvariants/foundry-invariant-init"
+
+# Installs a real `foundry-invariant-init` command that runs main().
+[project.scripts]
+foundry-invariant-init = "foundry_invariant_init:main"
+
+# The tool is a single flat module, not a package directory.
+[tool.setuptools]
+py-modules = ["foundry_invariant_init"]
